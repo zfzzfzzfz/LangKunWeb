@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from app01 import views
 urlpatterns = [
-    path("admin/", views.index),
     path("", views.index),
+    path("phasynthesis/", views.get_data),
 ]
 

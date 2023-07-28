@@ -1,0 +1,55 @@
+{% extends 'layout_content.html' %}
+{% load static %}
+{% block content1 %}
+    <h4>PHA 合成通路</h4>
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card m-b-30">
+                <div class="card-body">
+                    <h4 class="mt-0 header-title">PHA合成通路Execl</h4>
+                    <p class="text-muted m-b-30 font-14"></p>
+                    <table id="datatable-buttons" class="table table-striped table-bordered"
+                           width="100%">
+                        <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Pathway</th>
+                            <th>Abbreviation</th>
+                            <th>Enzyme</th>
+                            <th>Species</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in data %}
+                            <tr>
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.Pathway }}</td>
+                                <td>{{ item.Abbreviation }}</td>
+                                <td>{{ item.Enzyme }}</td>
+                                <td>{{ item.Species }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+    <!-- Required datatable js -->
+    <script src="{% static 'assets1/plugins/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/dataTables.bootstrap4.min.js' %}"></script>
+    <!-- Buttons examples -->
+    <script src="{% static 'assets1/plugins/datatables/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/jszip.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/pdfmake.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/vfs_fonts.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/buttons.print.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/buttons.colVis.min.js' %}"></script>
+    <!-- Responsive examples -->
+    <script src="{% static 'assets1/plugins/datatables/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'assets1/plugins/datatables/responsive.bootstrap4.min.js' %}"></script>
+    <!-- Datatable init js -->
+    <script src="{% static 'assets1/pages/datatables.init.js' %}"></script>
+{% endblock %}
