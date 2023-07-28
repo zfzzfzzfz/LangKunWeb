@@ -4,7 +4,6 @@
  Website: www.themesdesign.in
  File: Datatable js
  */
-
 $(document).ready(function() {
     $('#datatable').DataTable();
 

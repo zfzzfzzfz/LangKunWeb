@@ -19,6 +19,7 @@ from django.urls import path
 from app01 import views
 urlpatterns = [
     path("", views.index),
+    path("index/", views.index),
     path("phasynthesis/", views.get_data),
 ]
 

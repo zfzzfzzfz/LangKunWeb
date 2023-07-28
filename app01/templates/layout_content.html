@@ -9,22 +9,23 @@
     <meta content="Admin Dashboard" name="description"/>
     <meta content="ThemeDesign" name="author"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="shortcut icon" href="{% static 'assets1/images/faviicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'assets_module/images/faviicon.png' %}">
     <!-- DataTables -->
-    <link href="{% static 'assets1/plugins/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet"
+    <link href="{% static 'assets_module/plugins/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet"
           type="text/css"/>
-    <link href="{% static 'assets1/plugins/datatables/buttons.bootstrap4.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'assets_module/plugins/datatables/buttons.bootstrap4.min.css' %}" rel="stylesheet"
+          type="text/css"/>
     <!-- Responsive datatable examples -->
-    <link href="{% static 'assets1/plugins/datatables/responsive.bootstrap4.min.css' %}" rel="stylesheet"
+    <link href="{% static 'assets_module/plugins/datatables/responsive.bootstrap4.min.css' %}" rel="stylesheet"
           type="text/css"/>
-{#    <link href="{% static 'assets1/css/bootstrap.min.css" rel="stylesheet" type="text/css' %}">#}
-{#    <link href="{% static 'assets1/css/icons.css" rel="stylesheet" type="text/css' %}">#}
-{#    <link href="{% static 'assets1/css/style.css" rel="stylesheet" type="text/css' %}">#}
+    {#    <link href="{% static 'assets_module/css/bootstrap.min.css" rel="stylesheet" type="text/css' %}">#}
+    {#    <link href="{% static 'assets_module/css/icons.css" rel="stylesheet" type="text/css' %}">#}
+    {#    <link href="{% static 'assets_module/css/style.css" rel="stylesheet" type="text/css' %}">#}
     <!-- Dropzone css -->
-    <link href="{% static 'assets1/plugins/dropzone/dist/dropzone.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets1/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets1/css/icons.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets1/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/plugins/dropzone/dist/dropzone.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/css/style.css' %}" rel="stylesheet" type="text/css">
 
 
     <link rel="stylesheet" href="{% static 'plugins/bootstrap-4.6.2/css/bootstrap.min.css' %}">
@@ -50,7 +51,8 @@
 
     <!-- ECharts 文件 -->
     <script src="{% static 'assets/js/echarts.js' %}"></script>
-
+     <!-- Vue 文件 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 
@@ -67,7 +69,7 @@
 <nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
     <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html"><i class="fas fa-anchor mr-2"></i><strong>ABSA</strong> INDEX</a>
+        <a class="navbar-brand" href="./index.html"><i class="fas fa-anchor mr-2"></i><strong>PHA</strong> INDEX</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -75,50 +77,38 @@
         <div class="navbar-collapse collapse" id="navbarColor02" style="">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="/login/">介绍</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        菜单栏 </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/index/">主页</a>
-                        <a class="dropdown-item" href="/login/">登录</a>
-                        <a class="dropdown-item" href="/layout/">退出</a>
-                        <a class="dropdown-item" href="/login/">切换账户</a>
-                    </div>
+                    <a class="nav-link" href="./index.html">介绍</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/userhome/">历史日志</a>
+                    <a class="nav-link" href="./index.html">PHA文献数据库</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/userhome/">PHA酶数据库</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/userhome/">PHA知识图谱</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/userhome/">PHA代谢通路</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/phasynthesis">PHA合成通路</a>
                 </li>
             </ul>
-            {#            <ul class="navbar-nav ml-auto d-flex align-items-center">#}
-            {#                <li class="nav-item">#}
-            {#			<span class="nav-link" href="#">#}
-            {#			<a class="btn btn-info btn-round shadow-sm" href="#" data-toggle="modal" data-target="#modal_newsletter"><i#}
-            {#                    class="fas fa-cloud-download-alt"></i> Download UI Kit <a#}
-            {#                    href="https://github.com/wowthemesnet/Anchor-Bootstrap-UI-Kit/archive/master.zip"#}
-            {#                    class="downloadzip" class="hidden"></a>#}
-            {#			</a>#}
-            {#			</span>#}
-            {#                </li>#}
-            {#            </ul>#}
         </div>
     </div>
 </nav>
 
 <div id="wrapper">
     <!-- Start right Content here -->
-    <div class="content-page">
+    <div class="content-page" style="margin: 0 auto; margin-left: 60px;">
         <!-- Start content -->
         <div class="content">
             <br>
             <br>
             <br>
             <br>
-            <br>
             <div class="page-content-wrapper ">
-
                 <div class="container-fluid">
                     <div class="row">
                         {#<div class="col-12">#}
@@ -140,21 +130,21 @@
 
 
 <!-- jQuery  -->
-<script src="{% static 'assets1/js/jquery.min.js' %}"></script>
-<script src="{% static 'assets1/js/popper.min.js' %}"></script>
-<script src="{% static 'assets1/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'assets1/js/modernizr.min.js' %}"></script>
-<script src="{% static 'assets1/js/detect.js' %}"></script>
-<script src="{% static 'assets1/js/fastclick.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.slimscroll.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.blockUI.js' %}"></script>
-<script src="{% static 'assets1/js/waves.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.nicescroll.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets_module/js/popper.min.js' %}"></script>
+<script src="{% static 'assets_module/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets_module/js/modernizr.min.js' %}"></script>
+<script src="{% static 'assets_module/js/detect.js' %}"></script>
+<script src="{% static 'assets_module/js/fastclick.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.slimscroll.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.blockUI.js' %}"></script>
+<script src="{% static 'assets_module/js/waves.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.nicescroll.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.scrollTo.min.js' %}"></script>
 <!-- Dropzone js -->
-<script src="{% static 'assets1/plugins/dropzone/dist/dropzone.js' %}"></script>
+<script src="{% static 'assets_module/plugins/dropzone/dist/dropzone.js' %}"></script>
 <!-- App js -->
-<script src="{% static 'assets1/js/app.js' %}"></script>
+<script src="{% static 'assets_module/js/app.js' %}"></script>
 {% block js %}{% endblock %}
 </body>
 

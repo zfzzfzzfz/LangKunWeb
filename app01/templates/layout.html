@@ -9,17 +9,17 @@
     <meta content="Admin Dashboard" name="description"/>
     <meta content="ThemeDesign" name="author"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="shortcut icon" href="{% static 'assets1/images/faviicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'assets_module/images/faviicon.png' %}">
     <!-- Dropzone css -->
-    <link href="{% static 'assets1/plugins/dropzone/dist/dropzone.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets1/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets1/css/icons.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets1/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/plugins/dropzone/dist/dropzone.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets_module/css/style.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'plugins/bootstrap-4.6.2/css/bootstrap.min.css' %}">
     <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/favicon.ico' %}">
     <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.ico' %}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>ABSA</title>
+    <title>PHA</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
           name='viewport'/>
 
@@ -34,7 +34,7 @@
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet"/>
 
     <!-- Animation CSS -->
-    <link href="{% static '/assets/css/vendor/aos.css' %}" rel="stylesheet"/>
+    <link href="{% static 'assets/css/vendor/aos.css' %}" rel="stylesheet"/>
 
 </head>
 
@@ -46,7 +46,7 @@ NAVBAR (remove topnav if you don't want changed nav background on scroll){#TOP#}
 ------------------------------------------------------------------------>
 <nav id='theme' class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html"><i class="fas fa-anchor mr-2"></i><strong>ABSA</strong> INDEX</a>
+        <a class="navbar-brand" href="/index"><i class="fas fa-anchor mr-2"></i><strong>PHA</strong> INDEX</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@ NAVBAR (remove topnav if you don't want changed nav background on scroll){#TOP#}
         <div class="navbar-collapse collapse" id="navbarColor02" style="">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html">介绍</a>
+                    <a class="nav-link" href="./index">介绍</a>
                 </li>
 
                 <li class="nav-item">
@@ -67,10 +67,10 @@ NAVBAR (remove topnav if you don't want changed nav background on scroll){#TOP#}
                     <a class="nav-link" href="/userhome/">PHA知识图谱</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/userhome/">PHA代谢通路</a>
+                    <a class="nav-link" href="/userhome">PHA代谢通路</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/phasynthesis">PHA合成</a>
+                    <a class="nav-link" href="/phasynthesis">PHA合成通路</a>
                 </li>
             </ul>
         </div>
@@ -84,57 +84,9 @@ NAVBAR (remove topnav if you don't want changed nav background on scroll){#TOP#}
 <!--- END HEADER -->
 <main class="container">
     {% block content2 %}{% endblock %}
-    {#    <!--------------------------------------#}
-    {#    COLOR SCHEME#}
-    {#    --------------------------------------->#}
     <section class="pt-5 pb-5" data-aos="fade-up">
         <h3 class="h5 mb-4 font-weight-bold"></h3>
         <div class="row text-white align-items-center text-center">
-            <div class="col-md-4">
-                <div class="bg-primary" style="height:80px;">
-                    <h5 class="pt-4">Primary</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-secondary" style="height:80px;">
-                    <h5 class="pt-4">Secondary</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-info" style="height:80px;">
-                    <h5 class="pt-4">Info</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-success" style="height:80px;">
-                    <h5 class="pt-4">Success</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-warning" style="height:80px;">
-                    <h5 class="pt-4">Warning</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-danger" style="height:80px;">
-                    <h5 class="pt-4">Danger</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-purple" style="height:80px;">
-                    <h5 class="pt-4">Purple</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-black" style="height:80px;">
-                    <h5 class="pt-4">Black</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-cyan" style="height:80px;">
-                    <h5 class="pt-4">Cyan</h5>
-                </div>
-            </div>
         </div>
     </section>
 </main>
@@ -160,7 +112,6 @@ FOOTER
 {#    </div>#}
 {#</footer>#}
 
-
 <!--------------------------------------
 JAVASCRIPTS
 --------------------------------------->
@@ -177,24 +128,21 @@ JAVASCRIPTS
 {% static 'assets/js/vendor/aos.js' %}" type="text/javascript"></script>
 
 <!-- jQuery  -->
-<script src="{% static 'assets1/js/jquery.min.js' %}"></script>
-<script src="{% static 'assets1/js/popper.min.js' %}"></script>
-<script src="{% static 'assets1/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'assets1/js/modernizr.min.js' %}"></script>
-<script src="{% static 'assets1/js/detect.js' %}"></script>
-<script src="{% static 'assets1/js/fastclick.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.slimscroll.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.blockUI.js' %}"></script>
-<script src="{% static 'assets1/js/waves.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.nicescroll.js' %}"></script>
-<script src="{% static 'assets1/js/jquery.scrollTo.min.js' %}"></script>
-
+<script src="{% static 'assets_module/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets_module/js/popper.min.js' %}"></script>
+<script src="{% static 'assets_module/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets_module/js/modernizr.min.js' %}"></script>
+<script src="{% static 'assets_module/js/detect.js' %}"></script>
+<script src="{% static 'assets_module/js/fastclick.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.slimscroll.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.blockUI.js' %}"></script>
+<script src="{% static 'assets_module/js/waves.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.nicescroll.js' %}"></script>
+<script src="{% static 'assets_module/js/jquery.scrollTo.min.js' %}"></script>
 <!-- Dropzone js -->
-<script src="{% static 'assets1/plugins/dropzone/dist/dropzone.js' %}"></script>
-
-
+<script src="{% static 'assets_module/plugins/dropzone/dist/dropzone.js' %}"></script>
 <!-- App js -->
-<script src="{% static 'assets1/js/app.js' %}"></script>
+<script src="{% static 'assets_module/js/app.js' %}"></script>
 
 <noscript>
     <style>
